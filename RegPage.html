@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - UrbanHelper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://www.shutterstock.com/image-vector/children-helpers-cleaning-home-vacuuming-260nw-2135299945.jpg');
+            text-align: center;
+            font-size: 18px;
+        }
+        header, footer {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        #register {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 400px;
+        }
+        #register form {
+            margin-top: 20px;
+        }
+        #register p {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        #register button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #register button:hover {
+            background-color: #e00f0f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Register for UrbanHelper</h1>
+    </header>
+    <main>
+        <section id="register">
+            <h2>Register for a New Account</h2>
+            <form id="registrationForm">
+                <input type="text" name="name" placeholder="Enter Name" required><br><br>
+                <input type="text" name="contact" placeholder="Enter Contact No" required><br><br>
+                <input type="number" name="age" placeholder="Enter Age" min="18" required><br><br>
+                <input type="email" name="email" placeholder="Enter Email" required><br><br>
+                <input type="password" name="password" placeholder="Enter Password" required><br><br>
+                <input type="password" name="confirm_password" placeholder="Re-enter Password" required><br><br>
+                <p>Password must have minimum 10 characters, start with a capital letter, and contain at least one symbol.</p>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UrbanHelper. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+            
+            // Redirect to the home page after successful registration
+            window.location.href = 'Loginpage.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - UrbanHelper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            text-align: center;
+            font-size: 18px;
+        }
+        header, footer {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        #services {
+            text-align: center;
+            padding: 20px;
+        }
+        .service {
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .service:hover {
+            background-color: #f9f9f9;
+        }
+        .sub-services {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Services Available</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="loginpage.html">Login</a></li>
+            <li><a href="RegPage.html">Register</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="services">
+            <h2>Popular Services</h2>
+            <div class="service" onclick="toggleSubServices('plumber')">
+                <h3>Plumber</h3>
+                <ul class="sub-services" id="plumber-services">
+                    <li>Tap Fitting</li>
+                    <li>Sink Pipe Repair</li>
+                    <li>Geyser Installation</li>
+                </ul>
+            </div>
+            <div class="service" onclick="toggleSubServices('electrician')">
+                <h3>Electrician</h3>
+                <ul class="sub-services" id="electrician-services">
+                    <li>T.V. Repair</li>
+                    <li>Heater Repair</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UrbanHelper. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleSubServices(serviceType) {
+            var subServices = document.getElementById(serviceType + "-services");
+            subServices.style.display = (subServices.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
